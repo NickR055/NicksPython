@@ -1,0 +1,10 @@
+remote - - [31/Dec/1994:23:59:37 -0700] "GET 957.ps HTTP/1.0" 200 122146
+remote - - [01/Jan/1995:00:31:54 -0700] "GET index.html HTTP/1.0" 200 2797
+remote - - [01/Jan/1995:00:31:58 -0700] "GET 2.gif HTTP/1.0" 200 2555
+remote - - [01/Jan/1995:00:32:33 -0700] "GET 3.gif HTTP/1.0" 200 36403
+remote - - [01/Jan/1995:01:39:21 -0700] "GET 20.html HTTP/1.0" 200 378
+local - - [01/Jan/1995:01:47:41 -0700] "GET index.html HTTP/1.0" 200 2797
+local - - [01/Jan/1995:01:47:49 -0700] "GET 39.html HTTP/1.0" 200 669
+local - - [01/Jan/1995:01:48:23 -0700] "GET index.html HTTP/1.0" 302 -
+local - - [01/Jan/1995:01:48:23 -0700] "GET index.html HTTP/1.0" 200 578
+local - - [01/Jan/1995:01:48:27 -0700] "GET index.html HTTP/1.0" 200 578
