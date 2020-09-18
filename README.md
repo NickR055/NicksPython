@@ -3,9 +3,8 @@ This is the readme
 Python 3 or higher required
 
 Steps:
-1. Run filegrab.py
-2. Run main.py
-3. Profit
+1. Run real.py
+2. Profit
 
 If main.py returns file find error
 1. enter "readlink -f local_copy.log"
