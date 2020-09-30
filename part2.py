@@ -1,12 +1,38 @@
 from urllib.request import urlretrieve
 import re
 from datetime import datetime
+import os
 
 URL_PATH = 'https://s3.amazonaws.com/tcmg476/http_access_log'
 LOCAL_FILE = 'local_copy.log'
 ERRORS = []
 # Use urlretrieve() to fetch a remote copy and save into the local file path
 local_file, headers = urlretrieve(URL_PATH, LOCAL_FILE)
+os.remove("Jan_Log.log")
+os.remove("Feb_Log.log")
+os.remove("Mar_Log.log")
+os.remove("Apr_Log.log")
+os.remove("May_Log.log")
+os.remove("Jun_Log.log")
+os.remove("Jul_Log.log")
+os.remove("Aug_Log.log")
+os.remove("Sep_Log.log")
+os.remove("Oct_Log.log")
+os.remove("Nov_Log.log")
+os.remove("Dec_Log.log")
+Jan_Log = open("Jan_Log.log", "x")
+Feb_Log = open("Feb_Log.log", "x")
+Mar_Log = open("Mar_Log.log", "x")
+Apr_Log = open("Apr_Log.log", "x")
+May_Log = open("May_Log.log", "x")
+Jun_Log = open("Jun_Log.log", "x")
+Jul_Log = open("Jul_Log.log", "x")
+Aug_Log = open("Aug_Log.log", "x")
+Sep_Log = open("Sep_Log.log", "x")
+Oct_Log = open("Oct_Log.log", "x")
+Nov_Log = open("Nov_Log.log", "x")
+Dec_Log = open("Dec_Log.log", "x")
+
 
 # Use open() to get a filehandle that can access the file
 fh = open(local_file)
@@ -28,7 +54,6 @@ thu =0
 fri =0
 sat =0
 sun =0
-weeks={}
 jan5=0
 feb5=0
 mar5=0
@@ -72,32 +97,71 @@ for line in lines:
             month=date.month
             if month==1:
                 jan5+=1
+                f = open("Jan_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==2:
                 feb5+=1
+                f = open("Feb_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==3:
                 mar5+=1
+                f = open("Mar_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==4:
                 apr5+=1
+                f = open("Apr_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==5:
                 may5+=1
+                f = open("May_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==6:
                 jun5+=1
+                f = open("Jun_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==7:
                 jul5+=1
+                f = open("Jul_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==8:
                 aug5+=1
+                f = open("Aug_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==9:
                 sep5+=1
+                f = open("Sep_Log.log", "a")
+                f.write(line)
+                f.close()
             if month==10:
                 oct5+=1
+                f = open("Oct_Log.log", "a")
+                f.write(line)
+                f.close()
         else:
             month = date.month
             if month == 10:
                 oct4 += 1
+                f = open("Oct_Log.log", "a")
+                f.write(line)
+                f.close()
             if month == 11:
                 nov4 += 1
+                f = open("Nov_Log.log", "a")
+                f.write(line)
+                f.close()
             if month == 12:
                 dec4 += 1
+                f = open("Dec_Log.log", "a")
+                f.write(line)
+                f.close()
 
 
         #Filecounter
@@ -156,4 +220,5 @@ print("The most requested file was: ",mostreq)
 #least
 leastreq = sorted(things, key=things.get,reverse = False)[:1]
 print("The least requested file was: ",leastreq)
+##Dates
 
